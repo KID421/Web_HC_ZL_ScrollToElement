@@ -1,1 +1,4 @@
-console.log("成功~");
+$(selector).each(function (index, element) {
+    // element == this
+    
+});
