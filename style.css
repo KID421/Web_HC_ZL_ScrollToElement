@@ -13,11 +13,11 @@ nav {
 }
 
 nav a {
-  padding: 30px;
+  padding: 25px 60px;
   text-decoration: none;
   display: inline-block;
   color: #fff;
-  font-size: 30px;
+  font-size: 32px;
 }
 
 section {
