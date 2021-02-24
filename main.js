@@ -14,4 +14,12 @@ $("a").each(function (index, element) {
     var top = offset.top;
 
     console.log("上方：" + top);
+
+    $(this).click(function (e) { 
+        e.preventDefault();
+        
+        $("html").animate({
+            scrollTop: top
+        })
+    });
 });
