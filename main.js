@@ -2,15 +2,15 @@
 // 取得每個 a 元素的資料
 $("a").each(function (index, element) {
     
-    console.log("編號：" + index);
+    //console.log("編號：" + index);
 
     var target = $(this).attr("data-st-target");
     var duration = $(this).attr("data-st-duration");
     var offsetTop = $(this).attr("data-st-offset");
 
-    console.log("目標：" + target);
-    console.log("時間：" + duration);
-    console.log("位移：" + offsetTop);
+    //console.log("目標：" + target);
+    //console.log("時間：" + duration);
+    //console.log("位移：" + offsetTop);
 
     var offset = $("#" + target).offset();
     var top = offset.top;
@@ -18,9 +18,9 @@ $("a").each(function (index, element) {
     // 上方 扣除 上方位移
     // top = top - offsetTop; // 原始寫法
     // 如果 offsetTop 存在的話 才執行 減法運算
-    if (offsetTop) top -= offsetTop;         // 簡寫2
+    if (offsetTop) top -= offsetTop;         // 簡寫
 
-    console.log("上方：" + top);
+    //console.log("上方：" + top);
 
     $(this).click(function (e) { 
         e.preventDefault();
@@ -31,4 +31,9 @@ $("a").each(function (index, element) {
             scrollTop: top
         }, parseInt(duration));
     });
+});
+
+// 使用者在用滑鼠滾動時 停止動畫
+$("html").on("mousewheel", function () {
+    $("html").stop();
 });
