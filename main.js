@@ -30,8 +30,6 @@ $("a").each(function (index, element) {
         $("html").stop().animate({
             scrollTop: top
         }, parseInt(duration));
-
-        console.log(123);
     });
 });
 
@@ -46,7 +44,7 @@ arrow.fadeOut();
 // 箭頭顯示與隱藏效果
 $(window).scroll(function () { 
     var windowTop = $(this).scrollTop();
-    console.log("視窗上方位置：" + windowTop);
+    // console.log("視窗上方位置：" + windowTop);
 
     var arrowTop = arrow.attr("data-st-top");
     var arrowTime = arrow.attr("data-st-time");
@@ -56,7 +54,7 @@ $(window).scroll(function () {
     // console.log("箭頭特效的時間　：" + arrowTime);
 
     // 如果 視窗位置 大於等於 箭頭上方 就 淡入
-    if (windowTop >= arrowTop) arrow.fadeIn(arrowTimeInt);
+    if (windowTop >= arrowTop) arrow.stop().fadeIn(arrowTimeInt);
     // 否則 就 淡出
-    else arrow.fadeOut(arrowTimeInt)
+    else arrow.stop().fadeOut(arrowTimeInt)
 });
