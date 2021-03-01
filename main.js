@@ -30,6 +30,8 @@ $("a").each(function (index, element) {
         $("html").stop().animate({
             scrollTop: top
         }, parseInt(duration));
+
+        console.log(123);
     });
 });
 
