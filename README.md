@@ -6,7 +6,13 @@ https://kid421.github.io/Web_HC_ZL_ScrollToElement/
 
 # 使用方式
 ## 連結 CDN
+將 CDN 放在 body 結束標籤前
+https://kid421.github.io/Web_HC_ZL_ScrollToElement/main.js
 
+```
+<script src="https://kid421.github.io/Web_HC_ZL_ScrollToElement/main.js"></script>
+</body>
+```
 
 ## 捲動說明
 data-st-target 要前往元素的 ID 名稱
