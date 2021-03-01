@@ -39,3 +39,9 @@ $("a").each(function (index, element) {
 $("html").on("mousewheel", function () {
     $("html").stop();
 });
+
+// 箭頭顯示與隱藏效果
+$(window).scroll(function () { 
+    var windowTop = $(this).scrollTop();
+    console.log(windowTop);
+});
