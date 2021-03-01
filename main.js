@@ -50,7 +50,13 @@ $(window).scroll(function () {
 
     var arrowTop = arrow.attr("data-st-top");
     var arrowTime = arrow.attr("data-st-time");
+    var arrowTimeInt = parseInt(arrowTime);             // 將文字轉為數字 (整數)
 
-    console.log("箭頭要出現的位置：" +  arrowTop);
-    console.log("箭頭特效的時間　：" + arrowTime);
+    // console.log("箭頭要出現的位置：" +  arrowTop);
+    // console.log("箭頭特效的時間　：" + arrowTime);
+
+    // 如果 視窗位置 大於等於 箭頭上方 就 淡入
+    if (windowTop >= arrowTop) arrow.fadeIn(arrowTimeInt);
+    // 否則 就 淡出
+    else arrow.fadeOut(arrowTimeInt)
 });
