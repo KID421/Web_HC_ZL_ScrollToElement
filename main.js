@@ -40,8 +40,17 @@ $("html").on("mousewheel", function () {
     $("html").stop();
 });
 
+var arrow = $("#arrow");
+arrow.fadeOut();
+
 // 箭頭顯示與隱藏效果
 $(window).scroll(function () { 
     var windowTop = $(this).scrollTop();
-    console.log(windowTop);
+    console.log("視窗上方位置：" + windowTop);
+
+    var arrowTop = arrow.attr("data-st-top");
+    var arrowTime = arrow.attr("data-st-time");
+
+    console.log("箭頭要出現的位置：" +  arrowTop);
+    console.log("箭頭特效的時間　：" + arrowTime);
 });
